@@ -29,7 +29,7 @@ jobs:
           token: ${{ secrets.WORKFLOW_GIT_ACCESS_TOKEN }}
           path: './site'
       - run: |
-          pip install python-frontmatter python-slugify
+          pip install python-frontmatter python-slugify nbformat nbconvert
           cd ./site
           python ./scripts/process_notebooks.py
           git config user.name github-actions
